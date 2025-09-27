@@ -1,0 +1,79 @@
+:root {
+  --fond-principal: #d6f5e3;
+  --accent-rose: #fce4ec;
+  --bleu-bouton: #a3e4f1;
+  --texte-principal: #333;
+  --texte-secondaire: #666;
+  --vert-prix: #2e7d32;
+  --rouge-erreur: #e57373;
+  --jaune-stock: #fff176;
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--accent-rose), var(--fond-principal));
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--texte-principal);
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.slogan {
+  font-style: italic;
+  color: var(--texte-secondaire);
+}
+
+.produits, .panier, #formulaire, #confirmation {
+  padding: 20px;
+  text-align: center;
+}
+
+#catalogue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.produit {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 15px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.produit img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+.produit p.stock {
+  color: var(--jaune-stock);
+  font-weight: bold;
+}
+
+button {
+  background-color: var(--bleu-bouton);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+}
