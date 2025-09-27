@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>W&Y - Wellness & Youth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.png" alt="Logo W&Y" class="logo">
+    <h1>W&Y - Wellness & Youth</h1>
+    <p class="slogan">Beauté naturelle, jeunesse éternelle</p>
+  </header>
+
+  <section class="produits">
+    <h2>Nos produits</h2>
+    <div id="catalogue"></div>
+  </section>
+
+  <section class="panier">
+    <h2>Votre panier</h2>
+    <div id="contenu-panier"></div>
+    <p id="livraison">Livraison : 6 DT</p>
+    <p id="total">Total : 0 DT</p>
+    <button onclick="afficherFormulaire()">Valider la commande</button>
+  </section>
+
+  <section id="formulaire" style="display:none;">
+    <h2>Coordonnées</h2>
+    <form action="https://formspree.io/f/mzzjznor" method="POST" onsubmit="return validerEtSoumettre()">
+      <label for="nom">Nom</label>
+      <input type="text" name="nom" id="nom" required>
+
+      <label for="telephone">Téléphone</label>
+      <input type="tel" name="telephone" id="telephone" required>
+
+      <label for="adresse">Adresse</label>
+      <textarea name="adresse" id="adresse" required></textarea>
+
+      <input type="hidden" name="commande" id="commande">
+
+      <button type="submit">Envoyer la commande</button>
+    </form>
+    <button onclick="envoyerWhatsApp()">Envoyer via WhatsApp</button>
+  </section>
+
+  <section id="confirmation" style="display:none;">
+    <h2>✅ Merci pour votre commande !</h2>
+    <p>Nous vous contacterons bientôt pour la livraison.</p>
+  </section>
+
+  <section id="auth-admin">
+    <h2>🔐 Accès Admin</h2>
+    <label for="admin-id">Identifiant</label>
+    <input type="text" id="admin-id">
+    <label for="admin-code">Code secret</label>
+    <input type="password" id="admin-code">
+    <button onclick="verifierAccesAdmin()">Connexion</button>
+    <p id="auth-message" style="color:red;"></p>
+  </section>
+
+    <section id="admin" style="display:none;">
+  <h2>🛠️ Gestion du stock</h2>
+  <div id="admin-stock"></div>
+  <button onclick="seDeconnecter()">Se déconnecter</button>
+</section>
+  </section>
+
+  <footer>
+    <p>Contact : wandy.naturals@gmail.com | WhatsApp : +21692212615</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
